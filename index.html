@@ -39,33 +39,31 @@
       <section>
         <h2>Наборы из двух мороженных</h2>
         <!--Скрытые переключатели слайдера-->
-        <input type="radio"/>
-        <input type="radio"/>
-        <input type="radio"/>
+        <input type="radio" id="slide_1"/>
+        <input type="radio" id="slide_2"/>
+        <input type="radio" id="slide_3"/>
         <!--Видимые переключатели слайдера-->
         <div>
-          <labeL>Слайд 1</labeL>
-          <labeL>Слайд 2</labeL>
-          <labeL>Слайд 3</labeL>
+          <label for="slide_1">Слайд 1</label>
+          <label for="slide_2">Слайд 2</label>
+          <label for="slide_3">Слайд 3</label>
         </div>
-        <!--Сменяющийся фон-->
-        <div></div>
         <!--Слайд 1-->
-        <div>
+        <div id="slideBlock_1">
           <img src="img/icecream_1_1.png" alt="Плобмир с помадкой" width="367" height="582">
           <img src="img/icecream_1_2.png" alt="Клубничный щербет" width="279" height="523">
           <p>Пломбир с помадкой и клубничный щербет</p>
           <a href="">Давайте оба!</a>
         </div>
         <!--Слайд 2-->
-        <div>
+        <div id="slideBlock_2">
           <img src="img/icecream_2_1.png" alt="Шоколадный пломбир" width="367" height="582">
           <img src="img/icecream_2_2.png" alt="Лимонный сорбет" width="279" height="523">
           <p>Шоколадный пломбир и лимонный сорбет</p>
           <a href="">Давайте оба!</a>
         </div>
         <!--Слайд 3-->
-        <div>
+        <div id="slideBlock_3">
           <img src="img/icecream_3_1.png" alt="Крм-брюле" width="367" height="582">
           <img src="img/icecream_3_2.png" alt="Малиновый с джемом" width="279" height="523">
           <p>Крем-брюле и пломбир с малиновым джемом</p>
@@ -90,28 +88,24 @@
             <p>310 ₽<span>/кг</span></p>
             <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
             <button>Быстрый просмотр</button>
-            <div>хит</div>
           </li>
           <li>
             <img src="img/icecream-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
             <p>380 ₽<span>/кг</span></p>
             <p>Сливочно-кофейное с кусочками шоколада</p>
             <button>Быстрый просмотр</button>
-            <div>хит</div>
           </li>
           <li>
             <img src="img/icecream-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <p>355 ₽<span>/кг</span></p>
             <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
             <button>Быстрый просмотр</button>
-            <div>хит</div>
           </li>
           <li>
             <img src="img/icecream-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             <p>415 ₽<span>/кг</span></p>
             <p>Сливочное крем-брюле с карамельной подливкой</p>
             <button>Быстрый просмотр</button>
-            <div>хит</div>
           </li>
         </ul>
       </section>
@@ -142,8 +136,9 @@
         <div>
           <section>
             <h2>Наши контакты</h2>
-            <p>Адрес главного офиса<br> и офлайн-магазина:<br><span>ул. Большая Конюшенная, 19/8, Санкт-Петербург</span></p>
-            <p>Для заказов по телефону:<br><a href="tel:+78124502525">8 812 450-25-25</a><br>(с 10 до 20 ежедневно</p>
+              <p>Адрес главного офиса<br> и офлайн-магазина:</p>
+              <address>ул. Большая Конюшенная, 19/8, Санкт-Петербург</address>
+              <p>Для заказов по телефону:<br><a href="tel:+78124502525">8 812 450-25-25</a><br>(с 10 до 20 ежедневно</p>
             <button>Форма обратной связи</button>
           </section>
         </div>
