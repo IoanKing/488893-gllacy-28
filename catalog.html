@@ -86,102 +86,144 @@
         <li><a href="">Сливочное</a></li>
       </ul>
       <h1>Сливочное мороженное</h1>
-      <!--Здесь будет форма фильтров-->
-      <ul>
-        <li>
-          <img src="img/icecream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p>310 ₽<span>/кг</span></p>
-          <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-          <button type="button">Быстрый просмотр</button>
-        </li>
-        <li>
-          <img src="img/icecream-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-          <p>380 ₽<span>/кг</span></p>
-          <p>Сливочно-кофейное с кусочками шоколада</p>
-          <button type="button">Быстрый просмотр</button>
-        </li>
-        <li>
-          <img src="img/icecream-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-          <p>355 ₽<span>/кг</span></p>
-          <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
-          <button type="button">Быстрый просмотр</button>
-        </li>
-        <li>
-          <img src="img/icecream-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-          <p>415 ₽<span>/кг</span></p>
-          <p>Сливочное крем-брюле с карамельной подливкой</p>
-          <button type="button">Быстрый просмотр</button>
-        </li>
-        <li>
-          <img src="img/icecream-5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
-          <p>325 ₽<span>/кг</span></p>
-          <p>Сливочное с брусничным джемом</p>
-          <button type="button">Быстрый просмотр</button>
-        </li>
-        <li>
-          <img src="img/icecream-6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
-          <p>410 ₽<span>/кг</span></p>
-          <p>Сливочно-черничное с цельными ягодами черники </p>
-          <button type="button">Быстрый просмотр</button>
-        </li>
-        <li>
-          <img src="img/icecream-7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
-          <p>315 ₽<span>/кг</span></p>
-          <p>Сливочно-лимонное с карамельной присыпкой</p>
-          <button type="button">Быстрый просмотр</button>
-        </li>
-        <li>
-          <img src="img/icecream-8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
-          <p>320 ₽<span>/кг</span></p>
-          <p>Сливочное с шоколадной стружкой</p>
-          <button type="button">Быстрый просмотр</button>
-        </li>
-        <li>
-          <img src="img/icecream-9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
-          <p>440 ₽<span>/кг</span></p>
-          <p>Сливочно-ванильное с кусочками шоколада</p>
-          <button type="button">Быстрый просмотр</button>
-        </li>
-        <li>
-          <img src="img/icecream-10.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
-          <p>435 ₽<span>/кг</span></p>
-          <p>Сливочноe с ментоловым сиропом</p>
-          <button type="button">Быстрый просмотр</button>
-        </li>
-        <li>
-          <img src="img/icecream-11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
-          <p>355 ₽<span>/кг</span></p>
-          <p>Сливочное с кусочками черного шоколада</p>
-          <button type="button">Быстрый просмотр</button>
-        </li>
-        <li>
-          <img src="img/icecream-12.png" width="267" height="267" alt="Сливочное с мятным сиропом">
-          <p>420 ₽<span>/кг</span></p>
-          <p>Сливочное с мятным сиропом</p>
-          <button type="button">Быстрый просмотр</button>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="">Предыдущая</a>
-        </li>
-        <li>1</li>
-        <li>
-          <a href="">2</a>
-        </li>
-        <li>
-          <a href="">3</a>
-        </li>
-        <li>
-          <a href="">4</a>
-        </li>
-        <li>
-          <a href="">5</a>
-        </li>
-        <li>
-          <a href="">Следующая</a>
-        </li>
-      </ul>
+      <section>
+        <h2 class="visually-hidden">Фильтры</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+            <div>
+              <label for="sort">Сортировка:</label>
+              <select id="sort">
+                <option selected>По популярности</option>
+                <option>По цене</option>
+              </select>
+            </div>
+            <div>
+              <p>Цена: <input name="min-price" type="text" value="100" id="min-price-input">₽ - <input name="max-price" type="text" value="500" id="max-price-input">₽
+              </p>
+              <div class="range">
+                <div class="range-scale"></div>
+                <div class="range-bar"></div>
+                <div class="range-min"></div>
+                <div class="range-max"></div>
+              </div>
+            </div>
+            <div>
+              <p>Жирность: </p>
+              <label><input type="radio" name="fat" value="without">0%</label>
+              <label><input type="radio" name="fat" value="less than 10%" checked>до 10%</label>
+              <label><input type="radio" name="fat" value="less than 30%">до 30%</label>
+              <label><input type="radio" name="fat" value="more than 30%">выше 30%</label>
+            </div>
+            <div>
+              <p>Наполнители: </p>
+              <label><input type="checkbox" name="filling" value="chokolade" checked>шоколадные</label>
+              <label><input type="checkbox" name="filling" value="sugar powders" checked>сахарный пресыпки</label>
+              <label><input type="checkbox" name="filling" value="frut">фрукты</label>
+              <label><input type="checkbox" name="filling" value="syrups">сиропы</label>
+              <label><input type="checkbox" name="filling" value="jams">джемы</label>
+            </div>
+          </fieldset>
+          <button type="submit">Применить</button>
+        </form>
+      </section>
+      <section>
+        <h2 class="visually-hidden">Каталог мороженного:</h2>
+        <ul>
+          <li>
+            <img src="img/icecream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <p>310 ₽<span>/кг</span></p>
+            <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+          <li>
+            <img src="img/icecream-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+            <p>380 ₽<span>/кг</span></p>
+            <p>Сливочно-кофейное с кусочками шоколада</p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+          <li>
+            <img src="img/icecream-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <p>355 ₽<span>/кг</span></p>
+            <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+          <li>
+            <img src="img/icecream-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+            <p>415 ₽<span>/кг</span></p>
+            <p>Сливочное крем-брюле с карамельной подливкой</p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+          <li>
+            <img src="img/icecream-5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
+            <p>325 ₽<span>/кг</span></p>
+            <p>Сливочное с брусничным джемом</p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+          <li>
+            <img src="img/icecream-6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
+            <p>410 ₽<span>/кг</span></p>
+            <p>Сливочно-черничное с цельными ягодами черники </p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+          <li>
+            <img src="img/icecream-7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
+            <p>315 ₽<span>/кг</span></p>
+            <p>Сливочно-лимонное с карамельной присыпкой</p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+          <li>
+            <img src="img/icecream-8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
+            <p>320 ₽<span>/кг</span></p>
+            <p>Сливочное с шоколадной стружкой</p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+          <li>
+            <img src="img/icecream-9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
+            <p>440 ₽<span>/кг</span></p>
+            <p>Сливочно-ванильное с кусочками шоколада</p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+          <li>
+            <img src="img/icecream-10.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
+            <p>435 ₽<span>/кг</span></p>
+            <p>Сливочноe с ментоловым сиропом</p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+          <li>
+            <img src="img/icecream-11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
+            <p>355 ₽<span>/кг</span></p>
+            <p>Сливочное с кусочками черного шоколада</p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+          <li>
+            <img src="img/icecream-12.png" width="267" height="267" alt="Сливочное с мятным сиропом">
+            <p>420 ₽<span>/кг</span></p>
+            <p>Сливочное с мятным сиропом</p>
+            <button type="button">Быстрый просмотр</button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="">Предыдущая</a>
+          </li>
+          <li>1</li>
+          <li>
+            <a href="">2</a>
+          </li>
+          <li>
+            <a href="">3</a>
+          </li>
+          <li>
+            <a href="">4</a>
+          </li>
+          <li>
+            <a href="">5</a>
+          </li>
+          <li>
+            <a href="">Следующая</a>
+          </li>
+        </ul>
+      </section>
     </main>
     <footer>
       <section>
