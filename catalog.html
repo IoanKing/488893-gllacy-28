@@ -88,40 +88,39 @@
       <h1>Сливочное мороженное</h1>
       <section>
         <h2 class="visually-hidden">Фильтры</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
-            <div>
-              <label for="sort">Сортировка:</label>
-              <select id="sort">
-                <option selected>По популярности</option>
-                <option>По цене</option>
-              </select>
+            <legend>Сортировка:</legend>
+            <select>
+              <option value="by popularity" selected>По популярности</option>
+              <option value="by price">По цене</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Цена: <span>100</span>₽ - <span>500</span>₽</legend>
+            <input type="hidden" name="min-price" value="100">
+            <input type="hidden" name="max-price" value="500">
+            <div class="range">
+              <div class="range-scale"></div>
+              <div class="range-bar"></div>
+              <div class="range-min"></div>
+              <div class="range-max"></div>
             </div>
-            <div>
-              <p>Цена: <input name="min-price" type="text" value="100" id="min-price-input">₽ - <input name="max-price" type="text" value="500" id="max-price-input">₽
-              </p>
-              <div class="range">
-                <div class="range-scale"></div>
-                <div class="range-bar"></div>
-                <div class="range-min"></div>
-                <div class="range-max"></div>
-              </div>
-            </div>
-            <div>
-              <p>Жирность: </p>
-              <label><input type="radio" name="fat" value="without">0%</label>
-              <label><input type="radio" name="fat" value="less than 10%" checked>до 10%</label>
-              <label><input type="radio" name="fat" value="less than 30%">до 30%</label>
-              <label><input type="radio" name="fat" value="more than 30%">выше 30%</label>
-            </div>
-            <div>
-              <p>Наполнители: </p>
-              <label><input type="checkbox" name="filling" value="chokolade" checked>шоколадные</label>
-              <label><input type="checkbox" name="filling" value="sugar powders" checked>сахарный пресыпки</label>
-              <label><input type="checkbox" name="filling" value="frut">фрукты</label>
-              <label><input type="checkbox" name="filling" value="syrups">сиропы</label>
-              <label><input type="checkbox" name="filling" value="jams">джемы</label>
-            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Жирность: </legend>
+            <label><input type="radio" name="fat" value="without">0%</label>
+            <label><input type="radio" name="fat" value="less than 10%" checked>до 10%</label>
+            <label><input type="radio" name="fat" value="less than 30%">до 30%</label>
+            <label><input type="radio" name="fat" value="more than 30%">выше 30%</label>
+          </fieldset>
+          <fieldset>
+            <legend>Наполнители: </legend>
+            <label><input type="checkbox" name="filling" value="chokolade" checked>шоколадные</label>
+            <label><input type="checkbox" name="filling" value="sugar powders" checked>сахарный пресыпки</label>
+            <label><input type="checkbox" name="filling" value="frut">фрукты</label>
+            <label><input type="checkbox" name="filling" value="syrups">сиропы</label>
+            <label><input type="checkbox" name="filling" value="jams">джемы</label>
           </fieldset>
           <button type="submit">Применить</button>
         </form>
