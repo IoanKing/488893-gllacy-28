@@ -461,3 +461,9 @@ img {
   line-height: 16px;
   color: var(--basic-white);
 }
+
+/* footer */
+
+.footer__dev a {
+  color: inherit;
+}
