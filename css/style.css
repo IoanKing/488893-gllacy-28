@@ -15,6 +15,7 @@
   --bg-green: #849D8F;
   --bg-gray: #8996A6;
   --bg-brown: #9D8B84;
+  --menu-click: #696969;
   --submenu-hover: #FBDED7;
   --submenu-click: #F6B5A5;
   --submenu-active: #D07058;
@@ -189,10 +190,14 @@ img {
   color: var(--basic-white);
 }
 
-.main-nav__item a:hover,
-.main-nav__item a:focus {
+.main-nav__item > a:hover,
+.main-nav__item > a:focus {
   color: var(--basic-nightrider);
   background-color: var(--basic-white);
+}
+
+.main-nav__item > a:active {
+  box-shadow: inset 0 2px 1px 0 var(--menu-click);
 }
 
 .main-nav__item--active > a,
