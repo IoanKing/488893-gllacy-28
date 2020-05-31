@@ -202,7 +202,7 @@ img {
   background-color: var(--submenu-click);
 }
 
-submenu__item--active a {
+.submenu__item--active a {
   color: var(--basic-white);
   background-color: var(--submenu-active);
 }
