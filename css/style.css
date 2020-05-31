@@ -163,6 +163,7 @@ img {
 /* main-nav */
 
 .main-nav__item a {
+  display: inline-block;
   font-weight: bold;
   line-height: 18px;
   color: var(--basic-white);
@@ -171,6 +172,12 @@ img {
 .main-nav__item a:hover,
 .main-nav__item a:focus {
   color: var(--basic-nightrider);
+  background-color: var(--basic-white);
+}
+
+.main-nav__item--active > a {
+  color: var(--basic-white);
+  background-color: var(--submenu-active);
 }
 
 .main-nav__item--dropdown {
