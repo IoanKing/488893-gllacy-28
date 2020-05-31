@@ -195,7 +195,10 @@ img {
   background-color: var(--basic-white);
 }
 
-.main-nav__item--active > a {
+.main-nav__item--active > a,
+.main-nav__item--active > a:hover,
+.main-nav__item--active > a:focus,
+.main-nav__item--active > a:active {
   color: var(--basic-white);
   background-color: var(--submenu-active);
 }
@@ -229,7 +232,10 @@ img {
   background-color: var(--submenu-click);
 }
 
-.submenu__item--active a {
+.submenu__item--active a,
+.submenu__item--active > a:hover,
+.submenu__item--active > a:focus,
+.submenu__item--active > a:active {
   color: var(--basic-white);
   background-color: var(--submenu-active);
 }
