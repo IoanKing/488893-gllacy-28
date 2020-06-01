@@ -1,4 +1,4 @@
-/* Variables */
+/*================= Variables ========================*/
 
 :root {
   --basic-white: #ffffff;
@@ -29,7 +29,7 @@
   --transparent-white: rgba(255, 255, 255, 0.4);
 }
 
-/* Fonts */
+/*====================== Fonts ======================*/
 
 @font-face {
   font-family: "Roboto";
@@ -49,7 +49,7 @@
   font-display: swap;
 }
 
-/* Global */
+/*===================== Global ====================*/
 
 body {
   min-width: 1200px;
@@ -105,7 +105,7 @@ img {
 
 .btn {
   margin: 0;
-  padding: 0;
+  padding: 10px; /*для предварительной визуализации*/
   font-size: 18px;
   font-weight: bold;
   background-color: var(--basic-white);
@@ -124,7 +124,7 @@ img {
 
 .btn:active {
   background-image: linear-gradient(var(--basic-tomato) 0%, var(--basic-cinnabar) 100%);
-  box-shadow: inset 0 2px 2px 0 var(--special-mandarian);
+  box-shadow: inset 0 2px 2px 0 var(--shadow-blood);
 }
 
 .link {
@@ -140,7 +140,7 @@ img {
   color: var(--submenu-link-hover);
 }
 
-/* Page */
+/*====================== Page =====================*/
 
 .page {
   background-color: var(--basic-nobel);
@@ -158,7 +158,7 @@ img {
   background-color: var(--bg-brown);
 }
 
-/* header */
+/*=================== header ====================*/
 
 .page-header {
   position: relative;
@@ -181,7 +181,7 @@ img {
   color: var(--basic-white);
 }
 
-/* main-nav */
+/*================= main-nav ======================*/
 
 .main-nav__item a {
   display: inline-block;
@@ -245,7 +245,7 @@ img {
   background-color: var(--submenu-active);
 }
 
-/* user-nav */
+/*====================== user-nav =====================*/
 
 .user-nav {
   font-size: 14px;
@@ -268,7 +268,7 @@ img {
   display: none;
 }
 
-/* main-slider */
+/*=================== main-slider =================*/
 
 .main-slider {
   position: relative;
@@ -330,7 +330,7 @@ img {
   display: block;
 }
 
-/* promo */
+/*================= promo ==================*/
 
 .promo {
   background-color: var(--basic-nobel);
@@ -364,7 +364,7 @@ img {
   background-image: url("../img/chocolate_bkgr.jpg");
 }
 
-/* catalog */
+/*================= catalog =========================*/
 
 .catalog__item .item-img {
   background-color: var(--basic-nobel);
@@ -386,7 +386,40 @@ img {
   text-decoration: underline;
 }
 
-/* about */
+/*==================== filter ======================*/
+
+.filters fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter legend {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filter__field {
+  padding: 10px; /*для предварительной визуализации*/
+  font-size: 16px;
+  line-height: 18px;
+  border: none;
+  color: var(--basic-white);
+  background-color: var(--transparent-white);
+}
+
+select.filter__field option {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+select.filter__field:hover,
+select.filter__field:focus {
+  color: var(--basic-nightrider);
+  background-color: var(--basic-white);
+}
+
+/*==================== about ========================*/
 
 .about {
   color: var(--basic-nightrider);
@@ -405,7 +438,7 @@ img {
   line-height: 22px;
 }
 
-/* post */
+/*===================== post =========================*/
 
 .post {
   color: var(--basic-nightrider);
@@ -431,7 +464,7 @@ img {
   text-decoration: underline;
 }
 
-/* newsletter */
+/*================ newsletter =======================*/
 
 .newsletter {
   color: var(--basic-nightrider);
@@ -452,7 +485,7 @@ img {
   text-shadow: 0px 2px 5px var(--transparent-firebrick);
 }
 
-/* contact-block */
+/*================== contact-block ======================*/
 
 .contact-block {
   font-size: 14px;
@@ -479,13 +512,13 @@ img {
   color: var(--submenu-link-hover);
 }
 
-/* aditional-nav */
+/*===================== aditional-nav ======================*/
 
 .aditional-nav__item a {
   color: var(--basic-white);
 }
 
-/* breadcrumbs */
+/*====================== breadcrumbs =========================*/
 
 .breadcrumbs__item a {
   font-size: 14px;
@@ -493,8 +526,40 @@ img {
   color: var(--basic-white);
 }
 
-/* footer */
+/*======================= footer ===========================*/
 
 .footer__dev a {
   color: inherit;
+}
+
+/*====================== pagination =========================*/
+
+.pagination__item a {
+  display: inline-block;
+  padding: 10px; /*для предварительной визуализации*/
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--basic-white);
+}
+
+.pagination__item:not(.pagination__item--current) a:hover,
+.pagination__item:not(.pagination__item--current) a:focus {
+  background-color: var(--transparent-white);
+}
+
+.pagination__item:not(.pagination__item--current) a:active {
+  color: var(--basic-nightrider);
+  background-color: var(--basic-white);
+}
+
+.pagination__item--current a {
+  color: var(--basic-nightrider);
+  background-color: var(--basic-white);
+}
+
+.pagination__item--disabled a {
+  color: var(--transparent-white);
+  cursor: not-allowed;
+  pointer-events: none;
 }

@@ -112,19 +112,21 @@
       <h1 class="main__title">Сливочное мороженное</h1>
       <section class="main__filters">
         <h2 class="visually-hidden">Фильтры</h2>
-        <form class="user-nav__form" action="https://echo.htmlacademy.ru" method="get">
+        <form class="filters" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset>
             <legend>Сортировка:</legend>
-            <select name="sort">
+            <select class="filter__field" name="sort">
               <option value="by popularity" selected>По популярности</option>
-              <option value="by price">По цене</option>
+              <option value="expensive first">Сначала недорогие</option>
+              <option value="cheap first">Сначала недорогие</option>
+              <option value="by fat">По жирности</option>
             </select>
           </fieldset>
           <fieldset>
-            <legend>Цена: <span>100</span>₽ - <span>500</span>₽</legend>
+            <legend class="filter__field">Цена: <span>100</span>₽ - <span>500</span>₽</legend>
             <input type="hidden" name="min-price" value="100">
             <input type="hidden" name="max-price" value="500">
-            <div class="range">
+            <div class="range" class="filter__field">
               <div class="range-scale"></div>
               <div class="range-bar"></div>
               <div class="range-min"></div>
@@ -133,20 +135,24 @@
           </fieldset>
           <fieldset>
             <legend>Жирность: </legend>
-            <label><input type="radio" name="fat" value="without">0%</label>
-            <label><input type="radio" name="fat" value="less than 10%" checked>до 10%</label>
-            <label><input type="radio" name="fat" value="less than 30%">до 30%</label>
-            <label><input type="radio" name="fat" value="more than 30%">выше 30%</label>
+            <div class="filter__field">
+              <label><input type="radio" name="fat" value="without">0%</label>
+              <label><input type="radio" name="fat" value="less than 10%" checked>до 10%</label>
+              <label><input type="radio" name="fat" value="less than 30%">до 30%</label>
+              <label><input type="radio" name="fat" value="more than 30%">выше 30%</label>
+            </div>
           </fieldset>
           <fieldset>
             <legend>Наполнители: </legend>
-            <label><input type="checkbox" name="filling" value="chokolade" checked>шоколадные</label>
-            <label><input type="checkbox" name="filling" value="sugar powders" checked>сахарный пресыпки</label>
-            <label><input type="checkbox" name="filling" value="frut">фрукты</label>
-            <label><input type="checkbox" name="filling" value="syrups">сиропы</label>
-            <label><input type="checkbox" name="filling" value="jams">джемы</label>
+            <div class="filter__field">
+              <label><input type="checkbox" name="filling" value="chokolade" checked>шоколадные</label>
+              <label><input type="checkbox" name="filling" value="sugar powders" checked>сахарный пресыпки</label>
+              <label><input type="checkbox" name="filling" value="frut">фрукты</label>
+              <label><input type="checkbox" name="filling" value="syrups">сиропы</label>
+              <label><input type="checkbox" name="filling" value="jams">джемы</label>
+            </div>
           </fieldset>
-          <button type="submit">Применить</button>
+          <button class="btn filter__submit" type="submit">Применить</button>
         </form>
       </section>
       <section class="catalog">
@@ -225,24 +231,24 @@
             <button class="btn" type="button">Быстрый просмотр</button>
           </li>
         </ul>
-        <ul>
-          <li>
+        <ul class="pagination__list">
+          <li class="pagination__item pagination__item--preview pagination__item--disabled">
             <a href="">Предыдущая</a>
           </li>
-          <li>1</li>
-          <li>
+          <li class="pagination__item pagination__item--current"><a href="">1</a></li>
+          <li class="pagination__item">
             <a href="">2</a>
           </li>
-          <li>
+          <li class="pagination__item">
             <a href="">3</a>
           </li>
-          <li>
+          <li class="pagination__item">
             <a href="">4</a>
           </li>
-          <li>
+          <li class="pagination__item">
             <a href="">5</a>
           </li>
-          <li>
+          <li class="pagination__item pagination__item--next">
             <a href="">Следующая</a>
           </li>
         </ul>
