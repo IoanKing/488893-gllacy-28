@@ -386,6 +386,17 @@ img {
   text-decoration: underline;
 }
 
+.catalog__item .link {
+  display: block;
+  color: var(--basic-white);
+}
+
+.catalog__item .link:hover,
+.catalog__item .link:focus,
+.catalog__item .link:active {
+  color: var(--submenu-link-hover);
+}
+
 /*==================== filter ======================*/
 
 .filters fieldset {
