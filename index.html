@@ -45,7 +45,7 @@
       <ul class="user-nav__list">
         <li class="user-nav__item user-nav__item--dropdown">
           <a class="user-nav__btn user-nav__btn--search" href="">
-            <span class="visually-hidden">Поиск</span>
+            <span>Поиск</span>
           </a>
           <form class="user-nav__form search-form" action="https://echo.htmlacademy.ru" method="post">
             <input type="search" name="search-param" placeholder="Крем брюле">
@@ -72,17 +72,17 @@
         </li>
       </ul>
     </div>
-    <p class="page-header__contacts">с 10 до 20, ежедневно<br><a href="tel:+78124502525" title="Контактный телефон">8
+    <p class="page-header__contacts">с 10 до 20, ежедневно<br><a class="link" href="tel:+78124502525" title="Контактный телефон">8
         812 450-25-25</a></p>
   </header>
-  <main class="main container">
+  <main class="main container main-wrapper">
     <h1 class="visually-hidden">Магазин Глейси</h1>
     <section class="main-slider">
       <h2 class="visually-hidden">Наборы из двух мороженных</h2>
       <!--Скрытые переключатели слайдера-->
-      <input type="radio" name="slide" id="slide_1" checked />
-      <input type="radio" name="slide" id="slide_2" />
-      <input type="radio" name="slide" id="slide_3" />
+      <input class="visually-hidden" type="radio" name="slide" id="slide_1" checked />
+      <input class="visually-hidden" type="radio" name="slide" id="slide_2" />
+      <input class="visually-hidden" type="radio" name="slide" id="slide_3" />
       <!--Видимые переключатели слайдера-->
       <div class="main-slider__controls">
         <label for="slide_1">Слайд 1</label>
@@ -93,28 +93,34 @@
       <div class="main-slider__item" id="slideBlock_1">
         <div class="main-slider__img">
           <img src="img/slide-1.png" alt="Плобмир с помадкой" width="647" height="583">
-          <div class="main-slider__light"></div>
+          <div class="main-slider__light main-slider__light--green"></div>
         </div>
-        <p>Пломбир с помадкой и клубничный щербет</p>
-        <a class="btn main-slider__btn" href="">Давайте оба!</a>
+        <div class="main-slider__content">
+          <p>Пломбир с помадкой и клубничный щербет</p>
+          <a class="btn main-slider__btn" href="">Давайте оба!</a>
+        </div>
       </div>
       <!--Слайд 2-->
       <div class="main-slider__item" id="slideBlock_2">
         <div class="main-slider__img">
           <img src="img/slide-2.png" alt="Шоколадный пломбир" width="647" height="583">
-          <div class="main-slider__light"></div>
+          <div class="main-slider__light main-slider__light--brown"></div>
         </div>
-        <p>Шоколадный пломбир и лимонный сорбет</p>
-        <a class="btn main-slider__btn" href="">Давайте оба!</a>
+        <div class="main-slider__content">
+          <p>Шоколадный пломбир и лимонный сорбет</p>
+          <a class="btn main-slider__btn" href="">Давайте оба!</a>
+        </div>
       </div>
       <!--Слайд 3-->
       <div class="main-slider__item" id="slideBlock_3">
         <div class="main-slider__img">
           <img src="img/slide-3.png" alt="Крем-брюле" width="647" height="583">
-          <div class="main-slider__light"></div>
+          <div class="main-slider__light main-slider__light--blue"></div>
         </div>
-        <p>Крем-брюле и пломбир с малиновым джемом</p>
-        <a class="btn main-slider__btn" href="">Давайте оба!</a>
+        <div class="main-slider__content">
+          <p>Крем-брюле и пломбир с малиновым джемом</p>
+          <a class="btn main-slider__btn" href="">Давайте оба!</a>
+        </div>
       </div>
     </section>
     <section class="promo promo--raspberry">
@@ -137,28 +143,28 @@
             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
           <p class="item-price">310 ₽<span class="item-unit">/кг</span></p>
           <a class="link item-name" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-          <button class="btn" type="button">Быстрый просмотр</button>
+          <button class="btn catalog__buttom" type="button">Быстрый просмотр</button>
         </li>
         <li class="catalog__item">
           <img class="item-img" src="img/icecream-2.png" width="267" height="267"
             alt="Сливочно-кофейное с кусочками шоколада">
           <p class="item-price">380 ₽<span class="item-unit">/кг</span></p>
           <a class="link item-name" href="">Сливочно-кофейное с кусочками шоколада</a>
-          <button class="btn" type="button">Быстрый просмотр</button>
+          <button class="btn catalog__buttom" type="button">Быстрый просмотр</button>
         </li>
         <li class="catalog__item">
           <img class="item-img" src="img/icecream-3.png" width="267" height="267"
             alt="Сливочно-клубничное с присыпкой из белого шоколада">
           <p class="item-price">355 ₽<span class="item-unit">/кг</span></p>
           <a class="link item-name" href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
-          <button class="btn" type="button">Быстрый просмотр</button>
+          <button class="btn catalog__buttom" type="button">Быстрый просмотр</button>
         </li>
         <li class="catalog__item">
           <img class="item-img" src="img/icecream-4.png" width="267" height="267"
             alt="Сливочное крем-брюле с карамельной подливкой">
           <p class="item-price">415 ₽<span class="item-unit">/кг</span></p>
           <a class="link item-name" href="">Сливочное крем-брюле с карамельной подливкой</a>
-          <button class="btn" type="button">Быстрый просмотр</button>
+          <button class="btn catalog__buttom" type="button">Быстрый просмотр</button>
         </li>
       </ul>
     </section>
@@ -192,7 +198,7 @@
     <div class="location">
       <div class="location__wrapper">
         <img class="location__image" src="img/map.png" width="1200" height="430" alt="Карта">
-        <div class="location__pointer">Мы сдесь!</div>
+        <div class="location__pointer"><img src="./img/pin.svg" alt="Мы здесь!" width="80" height="140"></div>
         <section class="contact-block">
           <h2 class="visually-hidden">Наши контакты</h2>
           <p>Адрес главного офиса<br> и офлайн-магазина:</p>
@@ -238,7 +244,7 @@
         </li>
       </ul>
     </section>
-    <p class="footer__dev">
+    <p class="footer__copyright">
       <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайт htmlacademy">
         <img src="img/logo-htmlacademy.svg" alt="Логотип htmlacademy" width="108" height="39">
       </a>
