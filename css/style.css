@@ -595,12 +595,14 @@ img {
 .filters {
   display: flex;
   flex-wrap: wrap;
-  width: 870px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 33px;
 }
 
 .filter__fieldset {
-  flex-grow: 1;
   margin: 0;
+  margin-right: 15px;
   margin-bottom: 7px;
   padding: 0;
   border: none;
@@ -613,14 +615,33 @@ img {
 }
 
 .filter__field {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   padding: 7px 14px;
-  margin-right: 15px;
   font-size: 16px;
   line-height: 18px;
+  min-height: 36px;
   border: none;
   color: var(--basic-white);
   background-color: var(--transparent-white-40);
   border-radius: 20px;
+}
+
+.filter__fieldset--sort .filter__field {
+  min-width: 196px;
+}
+
+.filter__fieldset--price .filter__field {
+  min-width: 218px;
+}
+
+.filter__fieldset--fat .filter__field--choises {
+  min-width: 425px;
+}
+
+.filter__fieldset--filling .filter__field--choises {
+  min-width: 711px;
 }
 
 .filter__field--choises label {
@@ -640,6 +661,29 @@ select.filter__field:hover,
 select.filter__field:focus {
   color: var(--basic-nightrider);
   background-color: var(--basic-white);
+}
+
+.filters .filter__submit {
+  padding: 7px 29px 7px;
+  margin-bottom: 7px;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--transparent-white-20);
+  border: 2px solid var(--basic-white);
+  border-radius: 20px;
+}
+
+.filters .filter__submit:hover,
+.filters .filter__submit:focus {
+  color: var(--basic-nightrider);
+  background-color: var(--basic-white);
+}
+
+.filters .filter__submit:active {
+  border: none;
+  padding: 9px 31px 9px;
+  box-shadow: inset 0 2px 2px 0 var(--basic-nightrider);
 }
 
 /*==================== about ========================*/
