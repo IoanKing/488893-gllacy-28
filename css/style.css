@@ -917,13 +917,14 @@ select.filter__field:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 26px;
+  min-width: 26px;
   height: 26px;
+  padding: 7px 8px;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
   color: var(--basic-white);
-  border-radius: 50%;
+  border-radius: 26px;
 }
 
 .pagination__item:not(.pagination__item--current) a:hover,
