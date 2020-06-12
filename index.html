@@ -172,17 +172,13 @@
             </svg>Вход
           </a>
           <form class="user-nav__form autorisation-form" action="https://echo.htmlacademy.ru" method="post">
-            <p>
-              <input id="login-login" type="email" name="login" placeholder="email@example.com">
-            </p>
-            <p>
-              <input id="login-password" type="password" name="password" placeholder="•••••••">
-            </p>
-            <a href="">Войти</a>
-            <p>
-              <a href="">Забыли пароль?</a>
-              <a href="">Новая регистрация</a>
-            </p>
+            <input class="autorisation-form__input" id="login-login" type="email" name="login" placeholder="email@example.com">
+            <input class="autorisation-form__input" id="login-password" type="password" name="password" placeholder="•••••••">
+            <a class="btn autorisation-form__submit" href="">Войти</a>
+            <div class="autorisation-form__help">
+              <a class="restore" href="">Забыли пароль?</a>
+              <a class="registration" href="">Новая регистрация</a>
+            </div>
           </form>
         </li>
         <li class="user-nav__item user-nav__item--dropdown">
@@ -393,25 +389,20 @@
     </div>
   </footer>
 
-  <section style="display: none">
+  <!-- modal-feedback--open -->
+  <section class="modal modal-feedback">
     <h2 class="visually-hidden">Обратная связь</h2>
-    <p>Мы обязательно вам ответим!</p>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <div>
-        <p>
-          <input type="text" name="feedback-name" placeholder="Имя фамилия" id="feedback-name">
-        </p>
-        <p>
-          <input type="email" name="feedback-email" placeholder="email@example.com" id="feedback-email">
-        </p>
-        <p>
-          <textarea name="feedback-text" placeholder="В свободной форме" rows="5" id="feedback-text"></textarea>
-        </p>
-      </div>
-      <button type="submit">Отправить</button>
+    <p class="feedback__description">Мы обязательно вам ответим!</p>
+    <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+      <input type="text" name="feedback-name" placeholder="Имя фамилия" id="feedback-name">
+      <input type="email" name="feedback-email" placeholder="email@example.com" id="feedback-email">
+      <textarea name="feedback-text" placeholder="В свободной форме" rows="5" id="feedback-text"></textarea>
+      <button class="btn feedback__submit" type="submit">Отправить</button>
     </form>
-    <button>Закрыть</button>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
+  <!-- overlay--open -->
+  <div class="overlay"></div>
 </body>
 
 </html>

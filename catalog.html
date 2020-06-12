@@ -164,60 +164,61 @@
               <input type="search" name="search-param" placeholder="Крем брюле">
             </form>
           </li>
-          <li class="user-nav__item user-nav__item--dropdown">
-            <a class="user-nav__btn user-nav__btn--autorization" href="">
-              <svg class="icon" width="20" height="19">
-                <use class="icon-entrance" xlink:href="#entrance" x="0" y="0" />
-              </svg>Вход
-            </a>
-            <form class="user-nav__form autorisation-form" action="https://echo.htmlacademy.ru" method="post">
-              <p>
-                <input id="login-login" type="email" name="login" placeholder="email@example.com">
-              </p>
-              <p>
-                <input id="login-password" type="password" name="password" placeholder="•••••••">
-              </p>
-              <a href="">Войти</a>
-              <p>
-                <a href="">Забыли пароль?</a>
-                <a href="">Новая регистрация</a>
-              </p>
-            </form>
-          </li>
+        <li class="user-nav__item user-nav__item--dropdown">
+          <a class="user-nav__btn user-nav__btn--autorization" href="">
+            <svg class="icon" width="20" height="19">
+              <use class="icon-entrance" xlink:href="#entrance" x="0" y="0" />
+            </svg>Вход
+          </a>
+          <form class="user-nav__form autorisation-form" action="https://echo.htmlacademy.ru" method="post">
+            <input class="autorisation-form__input" id="login-login" type="email" name="login" placeholder="email@example.com">
+            <input class="autorisation-form__input" id="login-password" type="password" name="password" placeholder="•••••••">
+            <a class="btn autorisation-form__submit" href="">Войти</a>
+            <div class="autorisation-form__help">
+              <a class="restore" href="">Забыли пароль?</a>
+              <a class="registration" href="">Новая регистрация</a>
+            </div>
+          </form>
+        </li>
           <li class="user-nav__item user-nav__item--dropdown user-nav__item--active">
             <a class="user-nav__btn user-nav__btn--bascet" href="" aria-label="Содержимое корзины">
               <svg class="icon" width="21" height="20">
                 <use class="icon-basket" xlink:href="#basket-red" x="0" y="0" />
               </svg>2 товара
             </a>
-            <form class="user-nav__form" action="https://echo.htmlacademy.ru" method="post">
-              <table>
+            <form class="user-nav__form basket-form" action="https://echo.htmlacademy.ru" method="post">
+              <table class="backet-table" border="0" cellspacing="0" cellpadding="0" width="100%">
+                <col width="25">
+                <col width="38">
+                <col width="260">
+                <col width="125">
+                <col width="70">
                 <tbody>
                   <tr>
-                    <td><button type="button">Удалить позицию из корзины</button>
+                    <td><button class="basket-close" type="button" aria-label="Удалить позицию из корзины"></button>
                       <input type="hidden" name="item-1" value="Пломбир с апельсиновым джемом">
                       <input type="hidden" name="quantity-1" value="1,5">
                       <input type="hidden" name="amount-1" value="300"></td>
                     <td><img src="img/icecream-1.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
                     <td>Пломбир с апельсиновым джемом</td>
-                    <td>1,5 кг х <span>200 руб.</span></td>
+                    <td>1,5 кг х <span class="item-price">200 руб.</span></td>
                     <td>300 руб.</td>
                   </tr>
                   <tr>
-                    <td><button type="button">Удалить позицию из корзины</button>
+                    <td><button class="basket-close" type="button" aria-label="Удалить позицию из корзины"></button>
                       <input type="hidden" name="item-2" value="Клубничный пломбир с присыпкой из белого шоколада">
                       <input type="hidden" name="quantity-2" value="1,5">
                       <input type="hidden" name="amount-2" value="450"></td>
                     <td><img src="img/icecream-3.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
                     <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                    <td>1,5 кг х <span>300 руб.</span></td>
+                    <td>1,5 кг х <span class="item-price">300 руб.</span></td>
                     <td>450 руб.</td>
                   </tr>
                 </tbody>
               </table>
               <input type="hidden" name="total" value="750">
-              <p>Итого: <span>750p</span></p>
-              <button type="submit">Оформить заказ</button>
+              <p class="backet-total">Итого: <span class="total">750</span> руб.</p>
+              <button class="btn backet__submit" type="submit">Оформить заказ</button>
             </form>
           </li>
         </ul>
