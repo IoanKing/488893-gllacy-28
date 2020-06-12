@@ -950,6 +950,10 @@ input[type="radio"].visually-hidden {
   padding-right: 19px;
 }
 
+.filter__field label {
+  cursor: pointer;
+}
+
 .filter__field--choises li {
   position: relative;
   padding-right: 20px;
@@ -969,6 +973,7 @@ input[type="radio"].visually-hidden {
   background-position: 50% 50%;
   background-size: contain;
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .filter__radio + label:hover:not(:disabled)::before,
@@ -998,6 +1003,7 @@ input[type="radio"].visually-hidden {
   background-position: 50% 50%;
   background-size: contain;
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .filter__checkbox + label:hover:not(:disabled)::before,
@@ -1030,6 +1036,10 @@ input[type="radio"].visually-hidden {
   padding-left: 35px;
 }
 
+select.filter__field {
+  cursor: pointer;
+}
+
 select.filter__field option {
   font-size: 14px;
   line-height: 16px;
@@ -1050,6 +1060,7 @@ select.filter__field:focus {
   background-color: var(--transparent-white-20);
   border: 2px solid var(--basic-white);
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .filters .filter__submit:hover,
