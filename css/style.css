@@ -282,9 +282,13 @@ input[type="radio"].visually-hidden {
   font-weight: bold;
   color: var(--basic-white);
   border-radius: 26px;
+}
+
+.main-nav__item:not(.main-nav__item--active) a {
   text-decoration: underline;
   text-decoration-color: var(--transparent-white-20);
   text-underline-position: under;
+  text-decoration-thickness: 1px;
 }
 
 .main-nav__item:hover > a,
@@ -861,11 +865,7 @@ input[type="radio"].visually-hidden {
   text-decoration: underline;
   text-decoration-color: var(--transparent-white-20);
   text-underline-position: under;
-}
-
-.catalog__item .link {
-  display: block;
-  color: var(--basic-white);
+  text-decoration-thickness: 1px;
 }
 
 .catalog__item .link:hover,
@@ -873,6 +873,11 @@ input[type="radio"].visually-hidden {
 .catalog__item .link:active {
   color: var(--submenu-link-hover);
   text-decoration-color: var(--transparent-link-hover);
+}
+
+.catalog__item .link {
+  display: block;
+  color: var(--basic-white);
 }
 
 .catalog__item:hover .catalog__detailed ,
@@ -1368,6 +1373,17 @@ select.filter__field:focus {
 
 .aditional-nav__item a {
   color: var(--basic-white);
+  text-decoration: underline;
+  text-decoration-color: var(--transparent-white-20);
+  text-underline-position: under;
+  text-decoration-thickness: 1px;
+}
+
+.aditional-nav__item a:hover,
+.aditional-nav__item a:focus,
+.aditional-nav__item a:active {
+  color: var(--submenu-link-hover);
+  text-decoration-color: var(--transparent-link-hover);
 }
 
 /*====================== breadcrumbs =========================*/
@@ -1389,8 +1405,19 @@ select.filter__field:focus {
   padding-left: 8px;
 }
 
-.breadcrumbs__item a {
+.breadcrumbs__item a  {
   color: var(--basic-white);
+  text-decoration: underline;
+  text-decoration-color: var(--transparent-white-20);
+  text-underline-position: under;
+  text-decoration-thickness: 1px;
+}
+
+.breadcrumbs__item a:hover,
+.breadcrumbs__item a:focus,
+.breadcrumbs__item a:active {
+  color: var(--submenu-link-hover);
+  text-decoration-color: var(--transparent-link-hover);
 }
 
 /*======================= footer ===========================*/
@@ -1437,7 +1464,19 @@ select.filter__field:focus {
 
 .footer__copyright a {
   color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--transparent-white-20);
+  text-underline-position: under;
+  text-decoration-thickness: 1px;
 }
+
+.footer__copyright a:hover,
+.footer__copyright a:focus,
+.footer__copyright a:active {
+  color: var(--submenu-link-hover);
+  text-decoration-color: var(--transparent-link-hover);
+}
+
 
 .footer__copyright .devlogo {
   padding: 0 0 0 10px;
