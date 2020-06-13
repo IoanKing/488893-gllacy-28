@@ -27,8 +27,10 @@
   --shadow-firebrick: rgba(160, 32, 1, 0.76);
   --shadow-ebony: rgba(49, 50, 53, 0.5);
   --shadow-black-40: rgba(0, 0, 0, 0.4);
+  --transparent-autorization-hover: rgba(232, 77, 55, 0.3)
   --transparent-link-hover: rgba(255, 188, 158, 0.3);
   --transparent-nightrider-20: rgba(50, 50, 50, 0.2);
+  --transparent-nightrider-30: rgba(50, 50, 50, 0.3);
   --transparent-floralwhite-50: rgba(248, 247, 244, 0.5);
   --transparent-floralwhite-50: rgba(248, 247, 244, 0.5);
   --transparent-pinkswan-52: rgba(178, 178, 178, 0.52);
@@ -532,9 +534,18 @@ input[type="radio"].visually-hidden {
 .autorisation-form__help a {
   margin-bottom: 5px;
   font-size: 13px;
-  font-weight: bold;
   line-height: 15px;
   color: var(--basic-nightrider);
+  text-decoration: underline;
+  text-decoration-color: var(--transparent-nightrider-30);
+  text-underline-position: under;
+  text-decoration-thickness: 1px;
+}
+
+.autorisation-form__help a:hover,
+.autorisation-form__help a:focus {
+  color: var(--submenu-link-hover);
+  text-decoration-color: var(--transparent-autorization-hover);
 }
 
 .user-nav__item--active .user-nav__btn,
