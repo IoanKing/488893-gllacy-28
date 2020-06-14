@@ -1026,8 +1026,8 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.filter__radio:not(:disabled) + label:hover::before,
-.filter__radio:not(:disabled) + label:focus::before {
+.filter__radio:not(:disabled):hover + label::before,
+.filter__radio:not(:disabled):focus + label::before {
   opacity: 1;
 }
 
@@ -1056,8 +1056,8 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.filter__checkbox:not(:disabled) + label:hover::before,
-.filter__checkbox:not(:disabled) + label:focus::before {
+.filter__checkbox:not(:disabled):hover + label::before,
+.filter__checkbox:not(:disabled):focus + label::before {
   opacity: 1;
 }
 
