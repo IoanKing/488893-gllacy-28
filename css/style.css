@@ -27,6 +27,7 @@
   --shadow-firebrick: rgba(160, 32, 1, 0.76);
   --shadow-ebony: rgba(49, 50, 53, 0.5);
   --shadow-black-40: rgba(0, 0, 0, 0.4);
+  --outline-color: rgba(46, 136, 228, 0.52);
   --transparent-autorization-hover: rgba(232, 77, 55, 0.3)
   --transparent-link-hover: rgba(255, 188, 158, 0.3);
   --transparent-nightrider-20: rgba(50, 50, 50, 0.2);
@@ -455,10 +456,21 @@ input[type="radio"].visually-hidden {
   padding: 15px;
   margin: 0;
   font-size: 14px;
+  font-weight: bold;
   line-height: 16px;
   border: 1px solid var(--basic-pinkswan);
-  color: var(--basic-nobel);
+  color: var(--basic-nightrider);
   border-radius: 4px;
+}
+
+.search-form input[type="search"]:focus {
+  outline-width: 2px;
+  outline-color: var(--outline-color);
+}
+
+.search-form input[type="search"]::placeholder {
+  font-weight: normal;
+  color: var(--basic-nobel);
 }
 
 .user-nav__btn {
@@ -515,10 +527,21 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-bottom: 20px;
   font-size: 14px;
+  font-weight: bold;
   line-height: 16px;
   border: 1px solid var(--basic-pinkswan);
-  color: var(--basic-nobel);
+  color: var(--basic-nightrider);
   border-radius: 4px;
+}
+
+.autorisation-form__input:focus {
+  outline-width: 2px;
+  outline-color: var(--outline-color);
+}
+
+.autorisation-form__input::placeholder {
+  font-weight: normal;
+  color: var(--basic-nobel);
 }
 
 .autorisation-form__submit {
@@ -1292,8 +1315,19 @@ select.filter__field:focus {
   flex-basis: 366px;
   margin-right: 12px;
   padding: 14px 14px 12px;
+  font-weight: bold;
   border: 1px solid var(--transparent-pinkswan-52);
   border-radius: 6px;
+  color: var(--basic-nightrider);
+}
+
+.newsletter-form__input:focus {
+  outline-width: 2px;
+  outline-color: var(--outline-color);
+}
+
+.newsletter-form__input::placeholder {
+  font-weight: normal;
   color: var(--basic-nobel);
 }
 
@@ -1752,9 +1786,10 @@ select.filter__field:focus {
   margin: 0;
   margin-bottom: 20px;
   font-size: 14px;
+  font-weight: bold;
   line-height: 16px;
   border: 1px solid var(--basic-pinkswan);
-  color: var(--basic-nobel);
+  color: var(--basic-nightrider);
   border-radius: 4px;
 }
 
@@ -1765,10 +1800,25 @@ select.filter__field:focus {
   margin: 0;
   margin-bottom: 25px;
   font-size: 14px;
+  font-weight: bold;
   line-height: 16px;
   border: 1px solid var(--basic-pinkswan);
-  color: var(--basic-nobel);
+  color: var(--basic-nightrider);
   border-radius: 4px;
+}
+
+.feedback__form input[type="text"]:focus,
+.feedback__form input[type="email"]:focus,
+.feedback__form textarea:focus {
+  outline-width: 2px;
+  outline-color: var(--outline-color);
+}
+
+.feedback__form input[type="text"]::placeholder,
+.feedback__form input[type="email"]::placeholder,
+.feedback__form textarea::placeholder {
+  font-weight: normal;
+  color: var(--basic-nobel);
 }
 
 .feedback__submit {
