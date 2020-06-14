@@ -1025,12 +1025,12 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.filter__radio + label:hover:not(:disabled)::before,
-.filter__radio + label:focus:not(:disabled)::before {
+.filter__radio:not(:disabled) + label:hover::before,
+.filter__radio:not(:disabled) + label:focus::before {
   opacity: 1;
 }
 
-.filter__radio + label:disabled::before {
+.filter__radio:disabled + label::before {
   opacity: 0.4;
 }
 
@@ -1055,12 +1055,12 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.filter__checkbox + label:hover:not(:disabled)::before,
-.filter__checkbox + label:focus:not(:disabled)::before {
+.filter__checkbox:not(:disabled) + label:hover::before,
+.filter__checkbox:not(:disabled) + label:focus::before {
   opacity: 1;
 }
 
-.filter__checkbox + label:disabled::before {
+.filter__checkbox:disabled + label::before {
   opacity: 0.4;
 }
 
