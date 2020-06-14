@@ -1031,6 +1031,7 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
+.filter__radio:disabled + label,
 .filter__radio:disabled + label::before {
   opacity: 0.4;
 }
@@ -1061,6 +1062,7 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
+.filter__checkbox:disabled + label,
 .filter__checkbox:disabled + label::before {
   opacity: 0.4;
 }
