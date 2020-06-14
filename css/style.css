@@ -616,18 +616,35 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 1px 1px 0 var(--transparent-nightrider-20);
 }
 
-.basket-form td {
+.backet-table td {
   position: relative;
   vertical-align: middle;
   padding-bottom: 16px;
 }
 
-.basket-form td:nth-child(3) {
+.backet-table td:nth-child(1) {
+  width: 25px;
+}
+
+.backet-table td:nth-child(2) {
+  width: 38px;
+}
+
+.backet-table td:nth-child(3) {
+  width: 260px;
   padding-left: 10px;
   padding-right: 20px;
 }
 
-.basket-form .item-price {
+.backet-table td:nth-child(4) {
+  width: 125px;
+}
+
+.backet-table td:nth-child(5) {
+  width: 70px;
+}
+
+.backet-table .item-price {
   color: var(--basic-shark);
 }
 
