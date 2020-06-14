@@ -29,7 +29,7 @@
   --shadow-ebony: rgba(49, 50, 53, 0.5);
   --shadow-black-40: rgba(0, 0, 0, 0.4);
   --outline-color: rgba(46, 136, 228, 0.52);
-  --transparent-autorization-hover: rgba(232, 77, 55, 0.3)
+  --transparent-autorization-hover: rgba(232, 77, 55, 0.3);
   --transparent-link-hover: rgba(255, 188, 158, 0.3);
   --transparent-nightrider-20: rgba(50, 50, 50, 0.2);
   --transparent-nightrider-30: rgba(50, 50, 50, 0.3);
@@ -559,21 +559,21 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
 }
 
-.autorisation-form__help a {
+.autorisation-form__link {
   margin-bottom: 5px;
   font-size: 13px;
   line-height: 15px;
-  color: var(--basic-nightrider);
-  text-decoration: underline;
-  text-decoration-color: var(--transparent-nightrider-30);
-  text-underline-position: under;
-  text-decoration-thickness: 1px;
 }
 
-.autorisation-form__help a:hover,
-.autorisation-form__help a:focus {
+.autorisation-form__link span {
+  color: var(--basic-nightrider);
+  border-bottom: 1px solid var(--transparent-nightrider-30);
+}
+
+.autorisation-form__link:hover span,
+.autorisation-form__link:focus span {
   color: var(--submenu-link-hover);
-  text-decoration-color: var(--transparent-autorization-hover);
+  border-bottom: 1px solid var(--transparent-autorization-hover);
 }
 
 .user-nav__item--active .user-nav__btn,
@@ -897,24 +897,22 @@ input[type="radio"].visually-hidden {
   line-height: 35px;
 }
 
-.catalog__item .item-name {
+.catalog__link .item-name {
+  display: inline;
+  border-bottom: 1px solid var(--transparent-white-20);
+}
+
+.catalog__link:hover .item-name,
+.catalog__link:focus .item-name,
+.catalog__link:active .item-name {
+  color: var(--submenu-link-hover);
+  border-bottom: 1px solid var(--transparent-link-hover);
+}
+
+.catalog__link {
+  display: block;
   margin-top: 27px;
   text-align: center;
-  text-decoration: underline;
-  text-decoration-color: var(--transparent-white-20);
-  text-underline-position: under;
-  text-decoration-thickness: 1px;
-}
-
-.catalog__item .link:hover,
-.catalog__item .link:focus,
-.catalog__item .link:active {
-  color: var(--submenu-link-hover);
-  text-decoration-color: var(--transparent-link-hover);
-}
-
-.catalog__item .link {
-  display: block;
   color: var(--basic-white);
 }
 
@@ -1436,17 +1434,14 @@ select.filter__field:focus {
 
 .breadcrumbs__item a  {
   color: var(--basic-white);
-  text-decoration: underline;
-  text-decoration-color: var(--transparent-white-20);
-  text-underline-position: under;
-  text-decoration-thickness: 1px;
+  border-bottom: 1px solid var(--transparent-white-20);
 }
 
 .breadcrumbs__item a:hover,
 .breadcrumbs__item a:focus,
 .breadcrumbs__item a:active {
   color: var(--submenu-link-hover);
-  text-decoration-color: var(--transparent-link-hover);
+  border-bottom: 1px solid var(--transparent-link-hover);
 }
 
 /*======================= footer ===========================*/
@@ -1491,19 +1486,16 @@ select.filter__field:focus {
   margin-left: auto;
 }
 
-.footer__copyright a {
+.footer__copyright .link {
   color: inherit;
-  text-decoration: underline;
-  text-decoration-color: var(--transparent-white-20);
-  text-underline-position: under;
-  text-decoration-thickness: 1px;
+  border-bottom: 1px solid var(--transparent-white-20);
 }
 
-.footer__copyright a:hover,
-.footer__copyright a:focus,
-.footer__copyright a:active {
+.footer__copyright .link:hover,
+.footer__copyright .link:focus,
+.footer__copyright .link:active {
   color: var(--submenu-link-hover);
-  text-decoration-color: var(--transparent-link-hover);
+  border-bottom: 1px solid var(--transparent-link-hover);
 }
 
 
@@ -1569,14 +1561,20 @@ select.filter__field:focus {
   padding-left: 23px;
 }
 
-.aditional-nav__item a {
+.aditional-nav__link {
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-white);
-  text-decoration: underline;
-  text-decoration-color: var(--transparent-white-20);
-  text-underline-position: under;
+  border-bottom: 1px solid var(--transparent-white-20);
 }
+
+.aditional-nav__link:hover,
+.aditional-nav__link:focus,
+.aditional-nav__link:active {
+  color: var(--submenu-link-hover);
+  border-bottom: 1px solid var(--transparent-link-hover);
+}
+
 
 .aditional-nav__item--favorite .aditional-nav__link {
   font-weight: bold;
@@ -1592,15 +1590,6 @@ select.filter__field:focus {
 .aditional-nav__link:focus .icon,
 .aditional-nav__link:active .icon {
   fill: var(--submenu-link-hover);
-}
-
-.aditional-nav__link:hover,
-.aditional-nav__link:focus,
-.aditional-nav__link:active {
-  color: var(--submenu-link-hover);
-  text-decoration: underline;
-  text-decoration-color: var(--transparent-white-20);
-  text-underline-position: under;
 }
 
 /*====================== pagination =========================*/
