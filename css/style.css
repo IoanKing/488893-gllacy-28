@@ -21,6 +21,7 @@
   --submenu-click: #F6B5A5;
   --submenu-active: #D07058;
   --submenu-link-hover: #E84D37;
+  --link-text-shadow: rgba(160, 32, 11, 0.76);
   --link-hover: #FFBC9E;
   --shadow-blood: #AC1000;
   --shadow-mandarian: #942718;
@@ -32,6 +33,7 @@
   --transparent-link-hover: rgba(255, 188, 158, 0.3);
   --transparent-nightrider-20: rgba(50, 50, 50, 0.2);
   --transparent-nightrider-30: rgba(50, 50, 50, 0.3);
+  --transparent-nightrider-70: rgba(50, 50, 50, 0.07);
   --transparent-floralwhite-50: rgba(248, 247, 244, 0.5);
   --transparent-floralwhite-50: rgba(248, 247, 244, 0.5);
   --transparent-pinkswan-52: rgba(178, 178, 178, 0.52);
@@ -132,7 +134,7 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   font-weight: bold;
   background-color: var(--basic-white);
-  background-image: linear-gradient(to top, var(--basic-tomato) 0%, var(--basic-cinnabar) 100%);
+  background-image: linear-gradient(to top, var(--basic-tomato) 100%, var(--basic-cinnabar) 100%);
   border: none;
   box-shadow: 0 2px 2px 0 var(--shadow-blood);
   color: var(--basic-white);
@@ -142,12 +144,15 @@ input[type="radio"].visually-hidden {
 .btn:hover,
 .btn:focus {
   background-image:
-    linear-gradient(var(--transparent-white-20), var(--transparent-white-20)), linear-gradient(var(--basic-tomato) 0%, var(--basic-cinnabar) 100%);
+    linear-gradient(to bottom, var(--transparent-white-20), var(--transparent-white-20)),
+    linear-gradient(to top, var(--basic-tomato)  100%, var(--basic-cinnabar) 100%);
 }
 
 .btn:active {
-  background: linear-gradient(to bottom, var(--basic-cinnabar) 0%, var(--basic-tomato) 100%);
-  box-shadow: inset 0 2px 2px var(--shadow-blood);
+  background:
+    linear-gradient(to bottom, var(--transparent-nightrider-70), var(--transparent-nightrider-70)),
+    linear-gradient(to top, var(--basic-tomato) 100%, var(--basic-cinnabar) 100%);
+  box-shadow: inset 0 2px 2px var(--shadow-mandarian);
 }
 
 .link {
@@ -724,7 +729,7 @@ input[type="radio"].visually-hidden {
   text-align: center;
   vertical-align: top;
   border-radius: 50px;
-  text-shadow: 0px 2px 5px var(--transparent-firebrick);
+  text-shadow: 0px 2px 5px var(--link-text-shadow);
 }
 
 .main-slider__controls {
@@ -797,7 +802,6 @@ input[type="radio"].visually-hidden {
   text-align: center;
   vertical-align: top;
   border-radius: 70px;
-  text-shadow: 0px 2px 5px var(--transparent-firebrick);
 }
 
 .promo--raspberry {
@@ -933,7 +937,6 @@ input[type="radio"].visually-hidden {
   text-align: center;
   vertical-align: top;
   border-radius: 50px;
-  text-shadow: 0px 2px 5px var(--transparent-firebrick);
 }
 
 /*==================== filter ======================*/
@@ -1338,7 +1341,6 @@ select.filter__field:focus {
   text-align: center;
   vertical-align: top;
   border-radius: 70px;
-  text-shadow: 0px 2px 5px var(--transparent-firebrick);
 }
 
 /*==================location===========================*/
@@ -1411,24 +1413,6 @@ select.filter__field:focus {
   text-align: center;
   vertical-align: top;
   border-radius: 50px;
-  text-shadow: 0px 2px 5px var(--transparent-firebrick);
-}
-
-/*===================== aditional-nav ======================*/
-
-.aditional-nav__item a {
-  color: var(--basic-white);
-  text-decoration: underline;
-  text-decoration-color: var(--transparent-white-20);
-  text-underline-position: under;
-  text-decoration-thickness: 1px;
-}
-
-.aditional-nav__item a:hover,
-.aditional-nav__item a:focus,
-.aditional-nav__item a:active {
-  color: var(--submenu-link-hover);
-  text-decoration-color: var(--transparent-link-hover);
 }
 
 /*====================== breadcrumbs =========================*/
@@ -1588,6 +1572,10 @@ select.filter__field:focus {
 .aditional-nav__item a {
   font-size: 13px;
   line-height: 18px;
+  color: var(--basic-white);
+  text-decoration: underline;
+  text-decoration-color: var(--transparent-white-20);
+  text-underline-position: under;
 }
 
 .aditional-nav__item--favorite .aditional-nav__link {
@@ -1604,6 +1592,15 @@ select.filter__field:focus {
 .aditional-nav__link:focus .icon,
 .aditional-nav__link:active .icon {
   fill: var(--submenu-link-hover);
+}
+
+.aditional-nav__link:hover,
+.aditional-nav__link:focus,
+.aditional-nav__link:active {
+  color: var(--submenu-link-hover);
+  text-decoration: underline;
+  text-decoration-color: var(--transparent-white-20);
+  text-underline-position: under;
 }
 
 /*====================== pagination =========================*/
