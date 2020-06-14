@@ -1709,6 +1709,7 @@ select.filter__field:focus {
   height: 22px;
   border: 0;
   cursor: pointer;
+  background: none;
 }
 
 .modal-close::before,
