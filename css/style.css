@@ -73,7 +73,7 @@ body {
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -228,12 +228,13 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-top: 9px;
 }
 
 .page-header__logo {
   padding-right: 10px;
+  margin: 0;
 }
 
 .page-header__contacts {
@@ -263,6 +264,7 @@ input[type="radio"].visually-hidden {
 
 .page-header__usernav {
   display: flex;
+  margin-left: auto;
 }
 
 /*================= main-nav ======================*/
@@ -1364,12 +1366,24 @@ select.filter__field:focus {
 
 .location {
   position: relative;
+  width: 100%;
+  min-height: 430px;
 }
 
 .location__pointer {
   position: absolute;
   top: 136px;
   left: 266px;
+}
+
+.location__google-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.location__google-map + .container .location__pointer {
+  display: none;
 }
 
 .location__pointer img {

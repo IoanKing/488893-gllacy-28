@@ -80,10 +80,10 @@
     </symbol>
   </svg>
   <header class="page-header container wrapper">
+    <a class="page-header__logo">
+      <img src="img/logo.svg" alt="Логотип" width="154" height="64">
+    </a>
     <nav class="page-header__nav">
-      <a class="page-header__logo" href="">
-        <img src="img/logo.svg" alt="Логотип" width="154" height="64">
-      </a>
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--dropdown">
           <a href="catalog.html">Каталог</a>
@@ -154,8 +154,8 @@
         812 450-25-25</a>
     </div>
   </header>
-  <main class="main container">
-    <div class="wrapper main-wrapper">
+  <main class="main">
+    <div class="wrapper main-wrapper container">
       <h1 class="visually-hidden">Магазин Глейси</h1>
       <section class="main-slider">
         <h2 class="visually-hidden">Наборы из двух мороженных</h2>
@@ -274,15 +274,17 @@
     </div>
     <div class="location">
       <div class="location__wrapper">
-        <img class="location__image" src="img/map.png" width="1200" height="430" alt="Карта">
-        <div class="location__pointer"><img src="./img/pin.svg" alt="Мы здесь!" width="80" height="140"></div>
-        <section class="contact-block">
-          <h2 class="visually-hidden">Наши контакты</h2>
-          <p class="contact-block__text">Адрес главного офиса<br> и офлайн-магазина:</p>
-          <address>ул. Большая Конюшенная, 19/8, Санкт-Петербург</address>
-          <p class="contact-block__text">Для заказов по телефону:<br><a class="contact-block__phone link" href="tel:+78124502525">8 812 450-25-25</a><br>(с 10 до 20 ежедневно)</p>
-          <button class="btn contact-block__button" type="button">Форма обратной связи</button>
-        </section>
+        <iframe class="location__google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6180397169198!2d30.3221247!3d59.93848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1541435271930" width="100%" height="430" style="border:0" allowfullscreen=""></iframe>
+        <div class="container">
+          <div class="location__pointer"><img src="./img/pin.svg" alt="Мы здесь!" width="80" height="140"></div>
+          <section class="contact-block">
+            <h2 class="visually-hidden">Наши контакты</h2>
+            <p class="contact-block__text">Адрес главного офиса<br> и офлайн-магазина:</p>
+            <address>ул. Большая Конюшенная, 19/8, Санкт-Петербург</address>
+            <p class="contact-block__text">Для заказов по телефону:<br><a class="contact-block__phone link" href="tel:+78124502525">8 812 450-25-25</a><br>(с 10 до 20 ежедневно)</p>
+            <button class="btn contact-block__button" type="button">Форма обратной связи</button>
+          </section>
+        </div>
       </div>
     </div>
   </main>
@@ -359,6 +361,36 @@
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
   <div class="overlay"></div>
+      <script>
+      // This example uses SVG path notation to add a vector-based symbol
+      // as the icon for a marker. The resulting icon is a star-shaped symbol
+      // with a pale yellow fill and a thick yellow border.
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: {lat: -25.363882, lng: 131.044922}
+        });
+
+        var goldStar = {
+          path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+          fillColor: 'yellow',
+          fillOpacity: 0.8,
+          scale: 1,
+          strokeColor: 'gold',
+          strokeWeight: 14
+        };
+
+        var marker = new google.maps.Marker({
+          position: map.getCenter(),
+          icon: goldStar,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 </body>
 
 </html>
