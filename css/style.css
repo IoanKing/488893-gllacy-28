@@ -1374,16 +1374,22 @@ select.filter__field:focus {
   position: absolute;
   top: 136px;
   left: 266px;
+  z-index: 10;
+}
+
+.location__map {
+  min-height: 430px;
+  background-image: url("../img/map.png");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .location__google-map {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.location__google-map + .container .location__pointer {
-  display: none;
+  z-index: 20;
 }
 
 .location__pointer img {
@@ -1404,6 +1410,7 @@ select.filter__field:focus {
   background-color: var(--basic-white);
   color: var(--basic-nightrider);
   border-radius: 16px;
+  z-index: 30;
 }
 
 .contact-block__text {
@@ -1715,9 +1722,6 @@ select.filter__field:focus {
   margin: auto;
   color: var(--basic-black);
   background-color: var(--basic-extra-light);
-  background-image: url("img/pattern-light.jpg");
-  background-position: 0 0;
-  background-repeat: repeat;
 }
 
 .modal-close {

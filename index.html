@@ -275,7 +275,7 @@
     <div class="location">
       <div class="location__wrapper">
         <iframe class="location__google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6180397169198!2d30.3221247!3d59.93848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1541435271930" width="100%" height="430" style="border:0" allowfullscreen=""></iframe>
-        <div class="container">
+        <div class="container location__map">
           <div class="location__pointer"><img src="./img/pin.svg" alt="Мы здесь!" width="80" height="140"></div>
           <section class="contact-block">
             <h2 class="visually-hidden">Наши контакты</h2>
@@ -361,36 +361,6 @@
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
   <div class="overlay"></div>
-      <script>
-      // This example uses SVG path notation to add a vector-based symbol
-      // as the icon for a marker. The resulting icon is a star-shaped symbol
-      // with a pale yellow fill and a thick yellow border.
-
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: {lat: -25.363882, lng: 131.044922}
-        });
-
-        var goldStar = {
-          path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
-          fillColor: 'yellow',
-          fillOpacity: 0.8,
-          scale: 1,
-          strokeColor: 'gold',
-          strokeWeight: 14
-        };
-
-        var marker = new google.maps.Marker({
-          position: map.getCenter(),
-          icon: goldStar,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script>
 </body>
 
 </html>
