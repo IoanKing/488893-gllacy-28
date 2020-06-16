@@ -1198,6 +1198,11 @@ select.filter__field:focus {
   cursor: pointer;
 }
 
+.range-controls .toggle:hover,
+.range-controls .toggle:focus {
+  transform: scale(1.2);
+}
+
 .range-controls .toggle-min {
   left: 14px;
 }
