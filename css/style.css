@@ -73,7 +73,7 @@ body {
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -862,10 +862,12 @@ input[type="radio"].visually-hidden {
 
 .catalog__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  margin-left: -13px;
+  margin-right: -13px;
   margin-bottom: 40px;
   list-style: none;
 }
@@ -879,8 +881,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   margin-top: -6px;
-  margin-left: -13px;
-  margin-right: -13px;
+  margin-left: 0;
+  margin-right: 0;
   margin-bottom: -40px;
   width: calc(267px + 26px);
   padding: 6px 13px 76px;
@@ -889,6 +891,7 @@ input[type="radio"].visually-hidden {
 
 .catalog__item:hover {
   background-color: var(--transparent-white-20);
+  border-radius: 4px;
   z-index: 1000;
 }
 
