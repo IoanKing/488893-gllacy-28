@@ -298,7 +298,7 @@ input[type="radio"].visually-hidden {
   border-radius: 26px;
 }
 
-.main-nav__item:not(.main-nav__item--active) a {
+.main-nav__item:not(.main-nav__item--active) > a {
   text-decoration: underline;
   text-decoration-color: var(--transparent-white-20);
   text-underline-position: under;
