@@ -67,6 +67,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotomedium.woff") format("woff"),
+    url("../fonts/robotomedium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*===================== Global ====================*/
 
 body {
@@ -88,19 +97,8 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  padding-left: 0;
-}
-
 img {
   max-width: 100%;
-  height: auto;
 }
 
 .container {
@@ -174,6 +172,7 @@ input[type="radio"].visually-hidden {
   height: 100%;
   background-repeat: no-repeat;
   background-position: top center;
+  background-position-x: calc(50% + 10px);
 }
 
 .page-body {
@@ -255,6 +254,7 @@ input[type="radio"].visually-hidden {
   font-size: 22px;
   font-weight: bold;
   line-height: 24px;
+  vertical-align: top;
   color: var(--basic-white);
 }
 
@@ -278,7 +278,10 @@ input[type="radio"].visually-hidden {
 
 .main-nav__list {
   display: flex;
+  margin: 0;
+  padding: 0;
   margin-top: 14px;
+  list-style: none;
 }
 
 .main-nav__item {
@@ -290,6 +293,7 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   padding: 3px 15px 6px;
   font-weight: bold;
+  vertical-align: top;
   color: var(--basic-white);
   border-radius: 26px;
 }
@@ -404,8 +408,11 @@ input[type="radio"].visually-hidden {
 .user-nav__list {
   display: flex;
   flex-direction: row;
-  font-size: 14px;
+  margin: 0;
+  padding: 0;
   margin-top: 14px;
+  font-size: 14px;
+  list-style: none;
 }
 
 .user-nav__item {
@@ -706,6 +713,10 @@ input[type="radio"].visually-hidden {
   margin-bottom: 40px;
 }
 
+.page__slider .main {
+  margin-bottom: 6px;
+}
+
 /*=================== main-slider =================*/
 
 .main-slider {
@@ -835,6 +846,7 @@ input[type="radio"].visually-hidden {
 
 .popular-list {
   grid-column: 1 / -1;
+
 }
 
 .pupular-item {
@@ -911,10 +923,16 @@ input[type="radio"].visually-hidden {
   font-size: 45px;
   font-weight: bold;
   line-height: 45px;
-  text-shadow: 0 1 3px var(--shadow-ebony);
+  text-shadow: 0 1px 3px var(--shadow-ebony);
+}
+
+.catalog__item .item-currency {
+  font-weight: bold;
+  margin-left: 15px;
 }
 
 .catalog__item .item-unit {
+  margin-left: 3px;
   font-size: 30px;
   line-height: 35px;
 }
@@ -1003,6 +1021,8 @@ input[type="radio"].visually-hidden {
 
 .filter__field--choises {
   position: relative;
+  margin: 0;
+  list-style: none;
 }
 
 .filter__fieldset--fat .filter__field--choises {
@@ -1218,7 +1238,7 @@ select.filter__field:focus {
   top: -1px;
   width: 16px;
   height: 16px;
-  border: 2px solid #000000;
+  border: 2px solid var(--basic-black);
   border-radius: 50%;
 }
 
@@ -1246,6 +1266,9 @@ select.filter__field:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .about__item {
@@ -1387,6 +1410,7 @@ select.filter__field:focus {
 
 .location__map {
   min-height: 430px;
+  background-color: var(--basic-shark);
   background-image: url("../img/map.png");
   background-position: 50% 50%;
   background-size: contain;
@@ -1470,6 +1494,9 @@ select.filter__field:focus {
   display: flex;
   max-width: 50%;
   margin-top: -23px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumbs__item {
@@ -1565,6 +1592,9 @@ select.filter__field:focus {
 .social__list {
   display: flex;
   align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .social__item {
@@ -1604,6 +1634,9 @@ select.filter__field:focus {
 .aditional-nav__list {
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .aditional-nav__item {
@@ -1647,10 +1680,13 @@ select.filter__field:focus {
 
 .pagination__list {
   display: flex;
+  margin: 0;
+  padding: 0;
   margin-right: -5px;
   justify-content: flex-start;
   align-items: center;
   margin-left: auto;
+  list-style: none;
 }
 
 .pagination__item {
@@ -1772,7 +1808,7 @@ select.filter__field:focus {
   left: 0;
   width: 100vw;
   height: 100vw;
-  background-color: var(--transparent-nightrider-20);
+  background-color: var(--transparent-nightrider-30);
   z-index: 2000;
 }
 
@@ -1784,6 +1820,11 @@ select.filter__field:focus {
 
 .modal-feedback--open {
   display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-feedback--error {
+  animation: shake 0.6s;
 }
 
 .modal-feedback {
@@ -1860,4 +1901,46 @@ select.filter__field:focus {
   margin-left: auto;
   padding: 11px 24px;
   border-radius: 70px;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
