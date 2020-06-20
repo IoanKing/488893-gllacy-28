@@ -77,7 +77,6 @@ overlay.addEventListener("click", function (evt) {
 sliderControls.forEach(function(element) {
   element.addEventListener("click", function (evt) {
     var controlNum = evt.target.dataset.controls;
-    console.log("controls - " + controlNum);
     sliderControls.forEach(function(control) {
       control.classList.remove("current");
     });
