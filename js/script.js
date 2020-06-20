@@ -7,6 +7,11 @@ var feedbackEmail = feedbackPopup.querySelector("input[name='feedback-email']");
 var feedbackMessage = feedbackPopup.querySelector("textarea[name='feedback-message']");
 var overlay = document.querySelector(".overlay");
 
+var sliderColors = ["green", "gray", "brown"];
+var sliderControls = document.querySelectorAll(".main-slider__controls button");
+var sliderItems = document.querySelectorAll(".main-slider__item");
+var pageBackground = document.querySelector(".page");
+
 var isStorageSupport = true;
 var storage = [];
 
@@ -19,7 +24,6 @@ try {
 
 feedbackButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  console.log("Открытие формы");
   feedbackPopup.classList.add("modal-feedback--open");
   overlay.classList.add("overlay--open");
 
@@ -30,7 +34,7 @@ feedbackButton.addEventListener("click", function (evt) {
   } else if (storage['name']) {
     feedbackName.value = storage['name'];
     feedbackEmail.focus();
-  } else if (storage_email) {
+  } else if (storage['email']) {
     feedbackEmail.value = storage['email'];
     feedbackName.focus();
   }
@@ -38,7 +42,6 @@ feedbackButton.addEventListener("click", function (evt) {
 
 feedbackClose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  console.log("Закрытие формы");
   feedbackPopup.classList.remove("modal-feedback--open");
   feedbackPopup.classList.remove("modal-feedback--error");
   overlay.classList.remove("overlay--open");
@@ -47,7 +50,6 @@ feedbackClose.addEventListener("click", function (evt) {
 feedbackForm.addEventListener("submit", function (evt) {
   if (!feedbackName.value || !feedbackEmail.value) {
     evt.preventDefault();
-    console.log("Не успешная отправка формы");
     feedbackPopup.classList.remove("modal-feedback--error");
     overlay.classList.remove("overlay--open");
     feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
@@ -55,7 +57,6 @@ feedbackForm.addEventListener("submit", function (evt) {
     overlay.classList.add("overlay--open");
   } else {
     evt.preventDefault();
-    console.log("Отправка формы");
     if (isStorageSupport) {
       localStorage.setItem("name", feedbackName.value);
       localStorage.setItem("email", feedbackEmail.value);
@@ -64,6 +65,35 @@ feedbackForm.addEventListener("submit", function (evt) {
     feedbackPopup.classList.remove("modal-feedback--error");
     overlay.classList.remove("overlay--open");
   }
+});
+
+overlay.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  feedbackPopup.classList.remove("modal-feedback--open");
+  feedbackPopup.classList.remove("modal-feedback--error");
+  overlay.classList.remove("overlay--open");
+});
+
+sliderControls.forEach(function(element) {
+  element.addEventListener("click", function (evt) {
+    var controlNum = evt.target.dataset.controls;
+    console.log("controls - " + controlNum);
+    sliderControls.forEach(function(control) {
+      control.classList.remove("current");
+    });
+    element.classList.add("current");
+    sliderItems.forEach(function(slide) {
+      var slideNum = slide.dataset.slider;
+      slide.classList.remove("main-slider__item--current");
+      if (slideNum == controlNum) {
+        slide.classList.add("main-slider__item--current");
+      }
+    });
+    sliderColors.forEach(function(color) {
+      pageBackground.classList.remove("page--" + color);
+    });
+    pageBackground.classList.add("page--" + sliderColors[controlNum-1]);
+  });
 });
 
 window.addEventListener("keydown", function (evt) {

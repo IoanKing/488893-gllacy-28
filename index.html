@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page page__slider page__green ">
+<body class="page page__slider page--green">
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="basket" viewBox="0 0 21 20">
       <g>
@@ -102,7 +102,7 @@
               <a class="submenu__link" href="">Фруктовый лед</a>
             </li>
             <li class="submenu__item">
-              <a class="submenu__link" href="">Мелорин</a>
+              <a href="">Мелорин</a>
             </li>
           </ul>
         </li>
@@ -163,7 +163,7 @@
       <section class="main-slider">
         <h2 class="visually-hidden">Наборы из двух мороженных</h2>
         <ul class="main-slider__list">
-          <li class="main-slider__item main-slider__item--current">
+          <li class="main-slider__item main-slider__item--current" data-slider="1">
             <h3 class="main-slider__title">
               Крем-брюле и пломбир с малиновым джемом
             </h3>
@@ -171,7 +171,7 @@
               Давайте оба!
             </a>
           </li>
-          <li class="main-slider__item">
+          <li class="main-slider__item" data-slider="2">
             <h3 class="main-slider__title">
               Шоколадный пломбир и лимонный сорбет
             </h3>
@@ -179,7 +179,7 @@
               Давайте оба!
             </a>
           </li>
-          <li class="main-slider__item">
+          <li class="main-slider__item" data-slider="3">
             <h3 class="main-slider__title">
               Пломбир с помадкой и клубничный щербет
             </h3>
@@ -189,9 +189,9 @@
           </li>
         </ul>
         <div class="main-slider__controls">
-          <button class="current" type="button" aria-label="Первый слайд"></button>
-          <button type="button" aria-label="Второй слайд"></button>
-          <button type="button" aria-label="Третий слайд"></button>
+          <button class="current" type="button" data-controls="1" aria-label="Первый слайд"></button>
+          <button type="button" data-controls="2" aria-label="Второй слайд"></button>
+          <button type="button" data-controls="3" aria-label="Третий слайд"></button>
         </div>
       </section>
       <section class="promo promo--raspberry">
