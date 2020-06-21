@@ -16,8 +16,8 @@ var isStorageSupport = true;
 var storage = [];
 
 try {
-  storage['name'] = localStorage.getItem("name");
-  storage['email'] = localStorage.getItem("email");
+  storage["name"] = localStorage.getItem("name");
+  storage["email"] = localStorage.getItem("email");
 } catch (err) {
   isStorageSupport = false;
 }
@@ -27,15 +27,15 @@ feedbackButton.addEventListener("click", function (evt) {
   feedbackPopup.classList.add("modal-feedback--open");
   overlay.classList.add("overlay--open");
 
-  if (storage['name'] && storage['email']) {
-    feedbackName.value = storage['name'];
-    feedbackEmail.value = storage['email'];
+  if (storage["name"] && storage["email"]) {
+    feedbackName.value = storage["name"];
+    feedbackEmail.value = storage["email"];
     feedbackMessage.focus();
-  } else if (storage['name']) {
-    feedbackName.value = storage['name'];
+  } else if (storage["name"]) {
+    feedbackName.value = storage["name"];
     feedbackEmail.focus();
-  } else if (storage['email']) {
-    feedbackEmail.value = storage['email'];
+  } else if (storage["email"]) {
+    feedbackEmail.value = storage["email"];
     feedbackName.focus();
   }
 });
